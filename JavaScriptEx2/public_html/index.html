@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <div id="showFirstName"></div>
+        <div id="showLastName"></div>
+        <div id="showPhoneNumb"></div>
+        <div id="showEmail"></div>
+        <form name="Person" id="myForm" method="POST">
+            <input type="text" id="firstName" name="firstName" placeholder="type first name here" size="20" />
+            <input type="text" id="lastName" name="lastName" placeholder="type last name here" size="20" />
+            <input type="text" id="phone" name="phone" placeholder="type phone number here" size="20" />
+            <input type="text" id="email" name="email" placeholder="type email here" size="20" />
+            <input type="submit" value="Submit Person" name="personButton" />
+        </form>
+        <div id="comments">divWriter</div>
+        <input type="text" id="writer" name="writer" placeholder="text in here!" size="20" />
+
+        <form id="inputform">
+            Enter text to be added to list<br/>
+            Or press an item on the list to remove it<br/>
+
+            <input type="text" name="input"><br />
+            <button id="but" type="button">Add to list</button>
+        </form>
+        <ul class="listen">
+
+        </ul>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="ex2.js"></script>
+    </body>
+</html>

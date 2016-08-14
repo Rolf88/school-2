@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#getcountry").click(function () {
+                    $.ajax({
+                        type: "GET",
+                        url: "https://restcountries.eu/rest/v1/alpha/" + $("#code").val()
+                    }).done(function (country) {
+                        var msg = "Hovedstad i " + country.name + " er " + country.capital;
+                        $("#capital").html(msg);
+                    }).fail(function () {
+                        alert("UUUUUPPPPPSSSS");
+                    });
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <h2>Get Capital by country code</h2>
+        <div>
+            <input id="code" type="text" placeholder="Enter coutry code">
+            <button id="getcountry">Get Capital</button>
+        </div>
+        <div id="capital"></div>
+    </body>
+</html>
